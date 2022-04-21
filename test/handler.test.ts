@@ -16,6 +16,7 @@ describe('handle', () => {
     const result = await handleRequest(new Request('/', { method: 'GET' }));
     expect(result.status).toEqual(200);
     const text = await result.text();
-    expect(compliments).toContainEqual(text);
+    const message: string = JSON.parse(text).message;
+    expect(compliments).toContainEqual(message);
   });
 });
