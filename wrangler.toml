@@ -1,9 +1,12 @@
 name = "herapi"
-main = "./src/index.ts"
+type = "webpack"
+zone_id = ""
 account_id = "e8243099200fd3071a8fc0cdbb4fcb8d"
 workers_dev = true
-route = "*"
+route = ""
 compatibility_date = "2022-03-11"
 
 [build]
 command = "yarn && yarn build"
+[build.upload]
+format = "service-worker"
